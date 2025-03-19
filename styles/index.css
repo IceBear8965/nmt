@@ -1,0 +1,182 @@
+/* CSS reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+input {
+  border: 1px solid #b0b0b0;
+  padding: 3px 5px 4px;
+  color: #979797;
+  width: 190px;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CSS resets */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Animations */
+@keyframes nav_underline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --text-white: #fff;
+  --headers-color: #333332;
+  --nav-active-color: #d87f3f;
+}
+
+body {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 80px;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.header_logo {
+  content: url("../assets/nmt_logo.svg");
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.nav {
+  align-items: center;
+  font-weight: 700;
+}
+
+.nav_items {
+  display: flex;
+}
+
+.nav_item {
+  margin-right: 30px; 
+}
+
+.nav_item:last-child {
+  margin: 0;
+}
+
+.nav_link {
+  position: relative;
+  transition: color 0.15s ease-out;
+}
+
+.nav_link:hover {
+  color: var(--nav-active-color);
+}
+
+.nav_link::after {
+  content: "";
+  display: block;
+  transform: scaleX(0);
+  height: 0.2rem;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--nav-active-color);
+  transition: transform 0.15s ease-out;
+}
+
+.nav_link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav_link.active {
+  color: var(--nav-active-color)
+}
