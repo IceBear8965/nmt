@@ -1,37 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles/index.css" rel="stylesheet">
-  <title>NMT</title>
-</head>
-<body>
-  <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>NMT</title>
+  </head>
+  <body>
     <header class="header">
-      <a class="logo_link" href="#">
-        <img class="header_logo" alt="Logo">
-      </a>
-      <nav class="nav">
-        <ul class="nav_items">
-          <li class="nav_item">
-            <a class="nav_link active" href="#">Home</a>
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo_link" href="#">
+            <img class="header_logo" alt="Logo" />
+          </a>
+          <nav class="nav">
+            <ul class="nav_items">
+              <li class="nav_item">
+                <a class="nav_link active" href="#">Home</a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#">Pricing</a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#">Clients</a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#">Contacts</a>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--Intro-->
+    <div class="intro_gradient"></div>
+    <div class="intro">
+      <div class="intro__inner">
+        <h1 class="title">Підготовка до НМТ</h1>
+        <h3 class="subtitle">Підготуйся до НМТ швидко та просто</h3>
+      </div>
+    </div>
+
+    <!--Registration-->
+    <section class="registration">
+      <div class="container">
+        <h1 class="registration_title">
+          Як зареєструватись для проходження НМТ 2025?
+        </h1>
+        <p class="account_instructions">
+          6 березня розпочинається основний період реєстрації осіб, які мають
+          намір узяти участь у національному мультипредметному тесті (НМТ). І
+          триватиме він до 3 квітня 2025 року. Щоб зареєструватися для участі в
+          НМТ, вступнику / вступниці потрібно за допомогою спеціального сервісу,
+          який стане активним 6 березня о 00:01, створити персональний кабінет
+          на вебсайті УЦОЯО. Це можна зробити автоматично, скориставшись
+          застосунком Дія, або ж шляхом заповнення форми в реєстраційному
+          сервісі.
+        </p>
+        <h3 class="registration_subtitle">
+          Після створення персонального кабінету виконати в ньому такі дії:
+        </h3>
+        <ul class="registration_instructions">
+          <li>
+            Зазначити реєстраційні дані (контактну інформацію, категорію
+            «випускник поточного року» або «випускник минулих років», відомості
+            про заклад освіти (для випускників поточного року), у разі потреби
+            поставити відмітку про проходження НМТ під час додаткових сесій,
+            указати на потребу створення особливих (спеціальних) умов), вибрати
+            із запропонованих переліків навчальний предмет на вибір і населений
+            пункт в Україні або за кордоном, де вступник / вступниця планує
+            перебувати в дні проведення НМТ, а також мову складання предметів
+            сертифікаційної роботи;
           </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#">Pricing</a>
+          <li>
+            Завантажити сканкопії та/або фотокопії реєстраційних документів (їх
+            перелік програма визначить автоматично відповідно до внесених
+            реєстраційних даних):
+            <ul>
+              <li>
+                <b>документа, що містить інформацію про освіту</b>:
+                <a
+                  href="https://testportal.gov.ua/wp-content/uploads/2025/02/Dovidka-z-mistsya-navchannya_2025.pdf"
+                  target="_blank"
+                  >довідки з місця навчання</a
+                >, яка підтверджує, що особа завершує здобуття повної загальної
+                середньої освіти у 2025 році (для цьогорічних випускників), або
+                один із таких документів:
+                <b>документ про повну загальну середню освіту</b>, документ про
+                здобутий освітньо-кваліфікаційний рівень молодшого спеціаліста,
+                документ про здобутий освітньо-професійний ступінь фахового
+                молодшого бакалавра, документ про здобутий ступінь вищої освіти,
+                виписка з Реєстру документів про освіту ЄДЕБО, яка підтверджує
+                наявність у ньому одного із зазначених у цьому підпункті
+                документів про освіту (для випускників);
+              </li>
+              <li>
+                <a
+                  href="https://testportal.gov.ua/wp-content/uploads/2025/02/Dovidka-z-zakladu-pro-movu-navchannya_2025.pdf"
+                  target="_blank"
+                  >довідки про мову навчання</a
+                >
+                (для вступників / вступниць, які бажають отримати завдання
+                сертифікаційної роботи з математики, та/або історії України,
+                та/або біології, та/або географії, та/або фізики, та/або хімії
+                мовою корінного народу або національної меншини);
+              </li>
+              <li>
+                <b
+                  >медичного
+                  <a
+                    href="https://testportal.gov.ua/wp-content/uploads/2016/12/dodat_4.pdf"
+                    target="_blank"
+                    >висновку</a
+                  >
+                  про створення особливих (спеціальних) умов</b
+                >
+                для проходження зовнішнього незалежного оцінювання за формою
+                первинної облікової документації № 086-3/о «Медичний висновок
+                про створення особливих (спеціальних) умов для проходження
+                зовнішнього незалежного оцінювання», затвердженою наказом
+                Міністерства освіти і науки України, Міністерства охорони
+                здоров’я України від 29 серпня 2016 року № 1027/900 (для осіб з
+                особливими освітніми потребами);
+              </li>
+            </ul>
           </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#">Clients</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#">Contacts</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#">About</a>
+          <li>
+            Підтвердити бажання взяти участь в НМТ і надіслати внесену
+            інформацію та копії документів на обробку до регіонального центру
+            оцінювання якості освіти, натиснувши на відповідну кнопку в сервісі.
           </li>
         </ul>
-      </nav>
-    </header>
-  </div>
-</body>
+        <p class="additional_register_info">
+          Детальніше про процедуру реєстрації можна дізнатись
+          <a
+            href="https://testportal.gov.ua/protsedura-reyestratsiyi-2025/"
+            target="_blank"
+            >тут</a
+          >
+          або у відео
+        </p>
+        <iframe
+          src="https://www.youtube.com/embed/gWxQYtDSjqc"
+          width="100%"
+          height="720px"
+          class="registration_video"
+        ></iframe>
+      </div>
+    </section>
+
+    <!--Cards-->
+    <section class="cards">
+      <div class="container">
+        <h1 class="cards_title">Тести</h1>
+        <p class="cards_subtitle">Пройти швидкий тест</p>
+        <div class="cards__inner">
+          <article class="card">
+            <img
+              src="./assets/images/cards/card1.jpg"
+              alt=""
+              class="card_img"
+            />
+            <h2 class="card_title">Best TrackRecord</h2>
+            <p class="card_text">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in
+            </p>
+            <div class="card_btn_wrapper">
+              <a class="card_btn">Lorem ipsum</a>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="./assets/images/cards/card2.jpg"
+              alt=""
+              class="card_img"
+            />
+            <h2 class="card_title">Trusted by leaders</h2>
+            <p class="card_text">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in
+            </p>
+            <div class="card_btn_wrapper">
+              <a class="card_btn">Lorem ipsum</a>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="./assets/images/cards/card3.jpg"
+              alt=""
+              class="card_img"
+            />
+            <h2 class="card_title">Brand Equity</h2>
+            <p class="card_text">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in
+            </p>
+            <div class="card_btn_wrapper">
+              <a class="card_btn">Lorem ipsum</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--Coaches-->
+    <section class="coaches">
+      <hgroup class="team_description">
+        <h1 class="coach_title">Наша команда</h1>
+        <h3 class="coach_subtitle">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu.
+        </h3>
+      </hgroup>
+      <section class="coaches__inner">
+        <article class="coach">
+          <img
+            src="assets/images/coaches/coach1.jpg"
+            alt=""
+            class="coach_photo"
+          />
+          <hgroup class="coach_description">
+            <h2 class="coach_name">Jeff Norton</h2>
+            <p class="coach_profession">Math</p>
+          </hgroup>
+        </article>
+        <article class="coach">
+          <img
+            src="assets/images/coaches/coach2.jpg"
+            alt=""
+            class="coach_photo"
+          />
+          <hgroup class="coach_description">
+            <h2 class="coach_name">Jeff Norton</h2>
+            <p class="coach_profession">Math2</p>
+          </hgroup>
+        </article>
+        <article class="coach">
+          <img
+            src="assets/images/coaches/coach3.jpg"
+            alt=""
+            class="coach_photo"
+          />
+          <hgroup class="coach_description">
+            <h2 class="coach_name">Jeff Norton</h2>
+            <p class="coach_profession">Math3</p>
+          </hgroup>
+        </article>
+        <article class="coach">
+          <img
+            src="assets/images/coaches/coach4.jpg"
+            alt=""
+            class="coach_photo"
+          />
+          <hgroup class="coach_description">
+            <h2 class="coach_name">Jeff Norton</h2>
+            <p class="coach_profession">Math4</p>
+          </hgroup>
+        </article>
+        <article class="coach">
+          <img
+            src="assets/images/coaches/coach5.jpg"
+            alt=""
+            class="coach_photo"
+          />
+          <hgroup class="coach_description">
+            <h2 class="coach_name">Jeff Norton</h2>
+            <p class="coach_profession">Math5</p>
+          </hgroup>
+        </article>
+      </section>
+    </section>
+
+    <!--Reviews-->
+    <section class="review">
+      <div class="container">
+        <div class="review__inner">
+          <div class="review_left">
+            <div class="review_header">
+              <h1 class="reviewer_name">Anita Allen</h1>
+              <p class="review_text">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+              </p>
+            </div>
+            <div class="review_scores">
+              <div class="slider_item">
+                <div class="slider_text">
+                  <span class="slider_text">Українська мова</span>
+                  <span class="slider_value">189</span>
+                </div>
+                <div class="bar" style="width: 89%"></div>
+              </div>
+              <div class="slider_item">
+                <div class="slider_text">
+                  <span class="slider_text">Історія Укрорейху</span>
+                  <span class="slider_value">170</span>
+                </div>
+                <div class="bar" style="width: 70%"></div>
+              </div>
+              <div class="slider_item">
+                <div class="slider_text">
+                  <span class="slider_text">Математика</span>
+                  <span class="slider_value">182</span>
+                </div>
+                <div class="bar" style="width: 82%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="review_right">
+            <img
+              src="assets/images/reviewers/reviewer1.jpg"
+              alt="photo.jpg"
+              class="review_img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <span class="footer_copyright">Copyright© IceBear8965</span>
+          <div class="footer_links">
+            <a
+              href="https://220school.kyiv.ua/"
+              target="_blank"
+              class="footer_link"
+            >
+              <img
+                src="assets/school-solid.svg"
+                alt=""
+                class="footer_link_icon"
+              />
+            </a>
+            <a
+              href="https://github.com/IceBear8965"
+              target="_blank"
+              class="footer_link"
+            >
+              <img
+                src="assets/square-github-brands.svg"
+                alt=""
+                class="footer_link_icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
