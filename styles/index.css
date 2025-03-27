@@ -32,6 +32,10 @@ body {
   padding: 0;
 }
 
+.body--fixed {
+  overflow: hidden;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -106,14 +110,33 @@ button {
 
 /* CSS resets */
 
-/* Fonts */
-
+/*Variables*/
 :root {
   --bg-color: #fff;
   --text-black: #333332;
   --text-white: #fff;
   --nav-active-color: #d87f3f;
   --gradient: linear-gradient(-45deg, #de813c, #3f519a);
+}
+
+/*Animations*/
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
 }
 
 body {
@@ -126,6 +149,7 @@ body {
 
 .container {
   max-width: 1170px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -134,10 +158,10 @@ body {
 */
 .header {
   width: 100%;
-  max-height: 80px;
+  height: 64px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15px;
+  padding: 10px 0;
 
   position: absolute;
   top: 0;
@@ -150,6 +174,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-height: 64px;
 }
 
 .header_logo {
@@ -158,6 +183,30 @@ body {
   max-height: 64px;
 }
 
+/*Fixed header*/
+.header--fixed {
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.2s ease-out;
+}
+
+.header--closed {
+  padding: 5px 0;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.2s ease-out;
+}
+
+/*Navigation*/
 .nav {
   align-items: center;
   font-weight: 700;
@@ -181,7 +230,37 @@ body {
   color: var(--text-white);
 }
 
+.header--fixed
+  > .container
+  > .header__inner
+  > .nav
+  > .nav_items
+  > .nav_item
+  > .nav_link {
+  color: var(--text-black);
+}
+
+.header--fixed
+  > .container
+  > .header__inner
+  > .nav
+  > .nav_items
+  > .nav_item
+  > .nav_link.active {
+  color: var(--nav-active-color);
+}
+
 .nav_link:hover {
+  color: var(--nav-active-color);
+}
+
+.header--fixed
+  > .container
+  > .header__inner
+  > .nav
+  > .nav_items
+  > .nav_item
+  > .nav_link:hover {
   color: var(--nav-active-color);
 }
 
@@ -204,6 +283,121 @@ body {
   color: var(--nav-active-color);
 }
 
+.nav_link.active::after {
+  transform: scaleX(1);
+}
+
+/*Nav toggle menu*/
+#nav-toggle,
+#nav-icon2,
+#nav-icon3,
+#nav-icon4 {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: none;
+}
+
+#nav-toggle.open {
+  padding-bottom: 1px;
+}
+
+#nav-toggle span,
+#nav-icon3 span,
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: var(--nav-active-color);
+  border-radius: 4px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-toggle span:nth-child(2) {
+  top: 15px;
+}
+
+#nav-toggle span:nth-child(3) {
+  top: 29px;
+}
+
+#nav-toggle.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-toggle.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/*Sidebar*/
+.sidebar {
+  height: 100vh;
+  width: 40vw;
+  padding-top: 80px;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 100;
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar_link {
+  display: block;
+  color: var(--text-black);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.sidebar_link:last-child {
+  margin-bottom: 0;
+}
+
 /* Intro
 ========
 */
@@ -218,7 +412,7 @@ body {
 
 .intro_gradient {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: var(--gradient);
   opacity: 0.9;
 
@@ -244,9 +438,10 @@ body {
 }
 
 .title {
-  font-size: 104px;
+  font-size: 102px;
   font-weight: 800;
   font-family: "Lobster", sans-serif;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -310,6 +505,8 @@ body {
 
 .registration_video {
   border: 0;
+  width: 100%;
+  height: 660px;
 }
 
 /*Cards*/
@@ -336,11 +533,11 @@ body {
 .cards__inner {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .card {
   width: 30%;
+  min-width: 300px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
@@ -434,10 +631,13 @@ body {
   color: var(--text-black);
 }
 
+.coach_photo {
+  width: 230px;
+}
+
 /*Reviews*/
 .review__inner {
   display: flex;
-  height: fit-content;
 }
 
 .review_left {
@@ -512,23 +712,22 @@ body {
   height: 50px;
   background: var(--gradient);
   margin-top: 40px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .footer > .container {
-  width: 100%;
+  height: 100%;
 }
 
 .footer__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .footer_copyright {
+  font-size: 14px;
+  font-weight: 300;
   color: var(--text-black);
 }
 
@@ -551,4 +750,309 @@ body {
 
 .footer_link_icon:hover {
   filter: unset;
+}
+
+/*Media*/
+@media (max-width: 1300px) {
+  body {
+    font-size: 17px;
+  }
+
+  /*Title*/
+  .title {
+    font-size: 90px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+
+  /*Coaches*/
+  .coach_photo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1170px) {
+  body {
+    font-size: 16px;
+  }
+
+  /*Registration*/
+  .registration_video {
+    height: 640px;
+  }
+
+  /*Review*/
+  .review_img {
+    max-height: 700px;
+  }
+}
+
+@media (max-width: 1100px) {
+  body {
+    font-size: 15px;
+  }
+
+  /*Registration*/
+  .registration_title {
+    font-size: 30px;
+  }
+
+  .registration_instructions > li > ul {
+    font-size: 13px;
+  }
+
+  .registration_video {
+    height: 600px;
+  }
+
+  /*Cards*/
+  .cards_title {
+    font-size: 42px;
+  }
+  /*Coache*/
+  .coach_title {
+    font-size: 42px;
+  }
+
+  .coaches__inner {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 60px 20px 60px;
+  }
+
+  .coach {
+    margin-bottom: 20px;
+  }
+
+  /*Review*/
+  .review_header {
+    margin-bottom: 40px;
+  }
+
+  .reviewer_name {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+
+  .slider_item {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 980px) {
+  /*Intro*/
+  .title {
+    font-size: 72px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  /*Header*/
+  .header {
+    height: 48px;
+  }
+
+  .header_logo {
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  /*Card*/
+  .cards {
+    margin: 50px 0 10px 0;
+  }
+
+  .cards__inner {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin-bottom: 40px;
+  }
+
+  /*Review*/
+  .reviewer_name {
+    font-size: 48px;
+  }
+
+  .slider_text {
+    font-size: 17px;
+  }
+
+  .slider_item > .bar {
+    height: 7px;
+  }
+
+  .review_img {
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  /*Header*/
+  .nav {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  /*Intro*/
+  .title {
+    font-size: 68px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  /*Coaches*/
+  .coaches {
+    margin-bottom: 50px;
+  }
+
+  /*Registration*/
+  .registration_title {
+    font-size: 25px;
+  }
+
+  .registration_instructions > li > ul {
+    font-size: 12px;
+  }
+
+  .registration_video {
+    height: 430px;
+  }
+
+  /*Review*/
+  .review__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review_left {
+    padding: 0;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .review_header {
+    margin-bottom: 30px;
+  }
+
+  .reviewer_name {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .review_text {
+    text-align: center;
+  }
+
+  .review_scores {
+    min-width: 600px;
+  }
+
+  .slider_item {
+    margin-bottom: 20px;
+  }
+
+  .slider_item:last-child {
+    margin-bottom: 0;
+  }
+
+  .slider_text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+
+  /*Intro*/
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .registration_title {
+    font-size: 18px;
+  }
+
+  /*Cards*/
+  .cards_title {
+    font-size: 36px;
+  }
+
+  /*Coaches*/
+  .coach_title {
+    font-size: 36px;
+  }
+
+  /*Review*/
+  .reviewer_name {
+    font-size: 40px;
+  }
+
+  .review_scores {
+    min-width: 400px;
+  }
+  .slider_item > .bar {
+    height: 6px;
+  }
+
+  .review_img {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 440px) {
+  body {
+    font-size: 12px;
+  }
+
+  /*Intro*/
+  .title {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  /*Registration*/
+  .registration_instructions > li > ul {
+    font-size: 11px;
+  }
+
+  /*Reviews*/
+  .review_scores {
+    min-width: 300px;
+  }
+
+  .slider_text {
+    font-size: 12px;
+  }
+
+  .review_img {
+    height: 300px;
+  }
 }

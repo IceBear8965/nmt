@@ -11,9 +11,10 @@
       rel="stylesheet"
     />
 
-    <title>NMT</title>
+    <title>НМТ 2025</title>
   </head>
   <body>
+    <!--Header-->
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -23,37 +24,63 @@
           <nav class="nav">
             <ul class="nav_items">
               <li class="nav_item">
-                <a class="nav_link active" href="#">Home</a>
+                <a class="nav_link active" href="#intro" data-scroll="#home"
+                  >Головна</a
+                >
               </li>
               <li class="nav_item">
-                <a class="nav_link" href="#">Pricing</a>
+                <a class="nav_link" href="#registration" data-scroll="#register"
+                  >Реєстрація</a
+                >
               </li>
               <li class="nav_item">
-                <a class="nav_link" href="#">Clients</a>
+                <a class="nav_link" href="#cards" data-scroll="#test">Тести</a>
               </li>
               <li class="nav_item">
-                <a class="nav_link" href="#">Contacts</a>
+                <a class="nav_link" href="#coaches" data-scroll="#coaches"
+                  >Репетитори</a
+                >
               </li>
               <li class="nav_item">
-                <a class="nav_link" href="#">About</a>
+                <a class="nav_link" href="#reviews" data-scroll="#reviews"
+                  >Відгуки</a
+                >
               </li>
             </ul>
           </nav>
+          <div id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
 
+    <!--Sidebar-->
+    <aside class="sidebar">
+      <div class="container">
+        <nav class="sidebar_nav">
+          <a href="#intro" class="sidebar_link">Головна</a>
+          <a href="#registration" class="sidebar_link">Реєстрація</a>
+          <a href="#cards" class="sidebar_link">Тести</a>
+          <a href="#coaches" class="sidebar_link">Репетитори</a>
+          <a href="#reviews" class="sidebar_link">Відгуки</a>
+        </nav>
+      </div>
+    </aside>
+
     <!--Intro-->
-    <div class="intro_gradient"></div>
-    <div class="intro">
+    <div class="intro_gradient" id="intro"></div>
+    <section class="intro">
       <div class="intro__inner">
         <h1 class="title">Підготовка до НМТ</h1>
         <h3 class="subtitle">Підготуйся до НМТ швидко та просто</h3>
       </div>
-    </div>
+    </section>
 
     <!--Registration-->
-    <section class="registration">
+    <section class="registration" id="registration">
       <div class="container">
         <h1 class="registration_title">
           Як зареєструватись для проходження НМТ 2025?
@@ -153,15 +180,13 @@
         </p>
         <iframe
           src="https://www.youtube.com/embed/gWxQYtDSjqc"
-          width="100%"
-          height="720px"
           class="registration_video"
         ></iframe>
       </div>
     </section>
 
     <!--Cards-->
-    <section class="cards">
+    <section class="cards" id="cards">
       <div class="container">
         <h1 class="cards_title">Тести</h1>
         <p class="cards_subtitle">Пройти швидкий тест</p>
@@ -219,21 +244,23 @@
     </section>
 
     <!--Coaches-->
-    <section class="coaches">
-      <hgroup class="team_description">
-        <h1 class="coach_title">Наша команда</h1>
-        <h3 class="coach_subtitle">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu.
-        </h3>
-      </hgroup>
-      <section class="coaches__inner">
+    <section class="coaches" id="coaches">
+      <div class="container">
+        <hgroup class="team_description">
+          <h1 class="coach_title">Наша команда</h1>
+          <h3 class="coach_subtitle">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu.
+          </h3>
+        </hgroup>
+      </div>
+      <div class="coaches__inner">
         <article class="coach">
           <img
             src="assets/images/coaches/coach1.jpg"
@@ -289,11 +316,11 @@
             <p class="coach_profession">Math5</p>
           </hgroup>
         </article>
-      </section>
+      </div>
     </section>
 
     <!--Reviews-->
-    <section class="review">
+    <section class="review" id="reviews">
       <div class="container">
         <div class="review__inner">
           <div class="review_left">
@@ -318,7 +345,7 @@
               </div>
               <div class="slider_item">
                 <div class="slider_text">
-                  <span class="slider_text">Історія Укрорейху</span>
+                  <span class="slider_text">Історія України</span>
                   <span class="slider_value">170</span>
                 </div>
                 <div class="bar" style="width: 70%"></div>
@@ -342,6 +369,8 @@
         </div>
       </div>
     </section>
+
+    <!--Footer-->
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -364,7 +393,7 @@
               class="footer_link"
             >
               <img
-                src="assets/square-github-brands.svg"
+                src="assets/github-brands.svg"
                 alt=""
                 class="footer_link_icon"
               />
@@ -373,5 +402,10 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/menu-toggle.js"></script>
+    <script src="scripts/fixed-header.js"></script>
+    <script src="scripts/smooth-scroll.js"></script>
   </body>
 </html>
