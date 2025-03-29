@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./quiz.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Favicon-->
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <title>НМТ 2025</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo_link" href="../index.html">
+            <img class="header_logo" alt="Logo" />
+          </a>
+          <nav class="nav">
+            <ul class="nav_items">
+              <li class="nav_item">
+                <a class="nav_link active" href="#" data-scroll="#home"
+                  >Істроія України</a
+                >
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#registration" data-scroll="#register"
+                  >Українська мова</a
+                >
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="#coaches" data-scroll="#coaches"
+                  >Математика</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header 
+
+    <!--Sidebar-->
+    <aside class="sidebar">
+      <div class="container">
+        <nav class="sidebar_nav">
+          <a href="#intro" class="sidebar_link active">Історія України</a>
+          <a href="#registration" class="sidebar_link">Українська мова</a>
+          <a href="#cards" class="sidebar_link">Математика</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!--Quiz-->
+    <div class="app">
+      <h1 class="quiz_title">Simple Quiz</h1>
+      <div class="quiz">
+        <h2 id="question">Question goes here</h2>
+        <div id="answer-buttons">
+          <button class="answer_btn">Answer 1</button>
+          <button class="answer_btn">Answer 2</button>
+          <button class="answer_btn">Answer 3</button>
+          <button class="answer_btn">Answer 4</button>
+        </div>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/menu-toggle.js"></script>
+    <script src="../scripts/quiz-history.js"></script>
+  </body>
+</html>

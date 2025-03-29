@@ -3,13 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!--Favicon-->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
     <title>НМТ 2025</title>
   </head>
@@ -204,7 +219,7 @@
               reprehenderit in
             </p>
             <div class="card_btn_wrapper">
-              <a class="card_btn">Lorem ipsum</a>
+              <a href="./quiz/history.html" class="card_btn">Пройти тест</a>
             </div>
           </article>
           <article class="card">
@@ -320,7 +335,7 @@
     </section>
 
     <!--Reviews-->
-    <section class="review" id="reviews">
+    <section class="reviews" id="reviews">
       <div class="container">
         <div class="review__inner">
           <div class="review_left">
@@ -407,5 +422,12 @@
     <script src="scripts/menu-toggle.js"></script>
     <script src="scripts/fixed-header.js"></script>
     <script src="scripts/smooth-scroll.js"></script>
+
+    <!--Prevent default link for header logo-->
+    <script>
+      $(".header_logo").on("click", function (event) {
+        event.preventDefault();
+      });
+    </script>
   </body>
 </html>
