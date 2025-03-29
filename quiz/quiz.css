@@ -119,26 +119,6 @@ a {
   --gradient: linear-gradient(-45deg, #de813c, #3f519a);
 }
 
-/*Animations*/
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-
 body {
   font-size: 18px;
   box-sizing: border-box;
@@ -476,24 +456,35 @@ body {
   background: #ff9393;
 }
 
+/*Bad Results*/
+.results_title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.results__inner {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.result_card {
+  max-width: 270px;
+  margin-bottom: 20px;
+}
+
+.result_card:last-child {
+  margin-bottom: 0;
+}
+
+.resultCardImg {
+  max-width: 270px;
+}
+
 /*Media*/
 @media (max-width: 1300px) {
   body {
     font-size: 17px;
-  }
-
-  /*Title*/
-  .title {
-    font-size: 90px;
-  }
-
-  .subtitle {
-    font-size: 28px;
-  }
-
-  /*Coaches*/
-  .coach_photo {
-    width: 200px;
   }
 }
 
@@ -501,80 +492,15 @@ body {
   body {
     font-size: 16px;
   }
-
-  /*Registration*/
-  .registration_video {
-    height: 640px;
-  }
-
-  /*Review*/
-  .review_img {
-    max-height: 700px;
-  }
 }
 
 @media (max-width: 1100px) {
   body {
     font-size: 15px;
   }
-
-  /*Registration*/
-  .registration_title {
-    font-size: 30px;
-  }
-
-  .registration_instructions > li > ul {
-    font-size: 13px;
-  }
-
-  .registration_video {
-    height: 600px;
-  }
-
-  /*Cards*/
-  .cards_title {
-    font-size: 42px;
-  }
-  /*Coache*/
-  .coach_title {
-    font-size: 42px;
-  }
-
-  .coaches__inner {
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 20px 60px 20px 60px;
-  }
-
-  .coach {
-    margin-bottom: 20px;
-  }
-
-  /*Review*/
-  .review_header {
-    margin-bottom: 40px;
-  }
-
-  .reviewer_name {
-    font-size: 60px;
-    margin-bottom: 30px;
-  }
-
-  .slider_item {
-    font-size: 18px;
-  }
 }
 
 @media (max-width: 980px) {
-  /*Intro*/
-  .title {
-    font-size: 72px;
-  }
-
-  .subtitle {
-    font-size: 22px;
-  }
-
   /*Header*/
   .header {
     height: 48px;
@@ -583,39 +509,6 @@ body {
   .header_logo {
     max-width: 48px;
     max-height: 48px;
-  }
-
-  /*Card*/
-  .cards {
-    margin: 50px 0 10px 0;
-  }
-
-  .cards__inner {
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .card {
-    margin-bottom: 40px;
-  }
-
-  /*Review*/
-  .reviewer_name {
-    font-size: 48px;
-  }
-
-  .slider_text {
-    font-size: 17px;
-  }
-
-  .slider_item > .bar {
-    height: 7px;
-  }
-
-  .review_img {
-    max-height: 600px;
   }
 }
 
@@ -633,72 +526,11 @@ body {
     display: block;
   }
 
-  /*Intro*/
-  .title {
-    font-size: 68px;
+  /*Quiz*/
+  #question {
+    font-size: 18px;
   }
-
-  .subtitle {
-    font-size: 20px;
-  }
-
-  /*Coaches*/
-  .coaches {
-    margin-bottom: 50px;
-  }
-
-  /*Registration*/
-  .registration_title {
-    font-size: 25px;
-  }
-
-  .registration_instructions > li > ul {
-    font-size: 12px;
-  }
-
-  .registration_video {
-    height: 430px;
-  }
-
-  /*Review*/
-  .review__inner {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .review_left {
-    padding: 0;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  .review_header {
-    margin-bottom: 30px;
-  }
-
-  .reviewer_name {
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .review_text {
-    text-align: center;
-  }
-
-  .review_scores {
-    min-width: 600px;
-  }
-
-  .slider_item {
-    margin-bottom: 20px;
-  }
-
-  .slider_item:last-child {
-    margin-bottom: 0;
-  }
-
-  .slider_text {
+  .answer_btn {
     font-size: 14px;
   }
 }
@@ -708,43 +540,21 @@ body {
     font-size: 13px;
   }
 
-  /*Intro*/
-  .title {
-    font-size: 48px;
-  }
-
-  .subtitle {
+  .sidebar_link {
     font-size: 16px;
   }
 
-  .registration_title {
-    font-size: 18px;
+  /*Quiz*/
+  .quiz_title {
+    font-size: 24px;
+    padding-bottom: 20px;
   }
 
-  /*Cards*/
-  .cards_title {
-    font-size: 36px;
+  #question {
+    font-size: 16px;
   }
-
-  /*Coaches*/
-  .coach_title {
-    font-size: 36px;
-  }
-
-  /*Review*/
-  .reviewer_name {
-    font-size: 40px;
-  }
-
-  .review_scores {
-    min-width: 400px;
-  }
-  .slider_item > .bar {
-    height: 6px;
-  }
-
-  .review_img {
-    max-height: 500px;
+  .answer_btn {
+    font-size: 13px;
   }
 }
 
@@ -753,30 +563,7 @@ body {
     font-size: 12px;
   }
 
-  /*Intro*/
-  .title {
-    font-size: 38px;
-  }
-
-  .subtitle {
-    font-size: 13px;
-  }
-
-  /*Registration*/
-  .registration_instructions > li > ul {
-    font-size: 11px;
-  }
-
-  /*Reviews*/
-  .review_scores {
-    min-width: 300px;
-  }
-
-  .slider_text {
-    font-size: 12px;
-  }
-
-  .review_img {
-    height: 300px;
+  .sidebar_link {
+    font-size: 14px;
   }
 }
