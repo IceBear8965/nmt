@@ -27,7 +27,6 @@ function scrollTracker() {
     const currentSidebarLink = document.querySelector(
       `.sidebar_nav a[href*="#${_class}"]`,
     );
-    console.log(currentSidebarLink);
 
     if (
       currentYScroll > sectionTop - 80 &&

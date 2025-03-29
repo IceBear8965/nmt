@@ -900,6 +900,12 @@ body {
   }
 }
 
+@media (max-width: 890px) {
+  .review_img {
+    height: 500px;
+  }
+}
+
 @media (max-width: 800px) {
   body {
     font-size: 14px;
