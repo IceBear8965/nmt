@@ -532,7 +532,7 @@ body {
   text-align: center;
   color: var(--text-black);
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .cards__inner {
@@ -552,6 +552,7 @@ body {
   width: 100%;
   max-height: 200px;
   border-radius: inherit;
+  box-shadow: 0px 10px 9px 0px #878787;
 }
 
 .card_title {
@@ -623,13 +624,16 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
   background-color: #f4f4f4;
   padding: 20px 60px 40px 60px;
 }
 
 .coach_name {
   color: var(--text-black);
+  font-size: 20px;
 }
 
 .coach_profession {
@@ -638,6 +642,7 @@ body {
 
 .coach_photo {
   width: 230px;
+  border-radius: 15px;
 }
 
 /*Reviews*/
@@ -775,6 +780,7 @@ body {
   /*Coaches*/
   .coach_photo {
     width: 200px;
+    margin: 0 10px;
   }
 }
 
@@ -822,8 +828,6 @@ body {
   }
 
   .coaches__inner {
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     padding: 20px 60px 20px 60px;
   }
 
