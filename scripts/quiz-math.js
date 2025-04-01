@@ -188,7 +188,7 @@ const showScore = () => {
   } else if (score > 5 && score < 10) {
     questionElement.innerHTML = `Ви набрали середній рівень: ${score} з ${questions.length}`;
   } else {
-    questionElement.innerHTML = `Ви набрали низький рівень: ${score} з ${questions.length}`;
+    questionElement.innerHTML = `Ви набрали низький рівень: ${score} з ${questions.length}<br><a href="../easter-egg.html" style="text-decoration:underline; cursor:pointer; margin: 15px;"><h4>Рекомендуємо обрати інші варіанти кар'єрного росту</h4></a>`;
   }
   nextButton.innerHTML = "Почати спочатку";
   nextButton.style.display = "block";
