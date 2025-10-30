@@ -1,539 +1,423 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="index.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="index.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
 
-    <!--Favicon-->
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+        <!--Favicon-->
+        <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="assets/favicon/site.webmanifest" />
+        <link rel="stylesheet" type="text/css" href="./slick.css" />
 
-    <title>НМТ 2025</title>
-  </head>
-  <body>
-    <!--Header-->
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <a class="logo_link" href="#">
-            <img class="header_logo" alt="Logo" />
-          </a>
-          <nav class="nav">
-            <ul class="nav_items">
-              <li class="nav_item">
-                <a class="nav_link active" href="#intro" data-scroll="#home"
-                  >Головна</a
-                >
-              </li>
-              <li class="nav_item">
-                <a class="nav_link" href="#registration" data-scroll="#register"
-                  >Реєстрація</a
-                >
-              </li>
-              <li class="nav_item">
-                <a class="nav_link" href="#cards" data-scroll="#test">Тести</a>
-              </li>
-              <li class="nav_item">
-                <a class="nav_link" href="#coaches" data-scroll="#coaches"
-                  >Репетитори</a
-                >
-              </li>
-              <li class="nav_item">
-                <a class="nav_link" href="#reviews" data-scroll="#reviews"
-                  >Відгуки</a
-                >
-              </li>
-            </ul>
-          </nav>
-          <div id="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!--Sidebar-->
-    <aside class="sidebar">
-      <div class="container">
-        <nav class="sidebar_nav">
-          <a href="#intro" class="sidebar_link">Головна</a>
-          <a href="#registration" class="sidebar_link">Реєстрація</a>
-          <a href="#cards" class="sidebar_link">Тести</a>
-          <a href="#coaches" class="sidebar_link">Репетитори</a>
-          <a href="#reviews" class="sidebar_link">Відгуки</a>
-        </nav>
-      </div>
-    </aside>
-
-    <!--Intro-->
-    <div class="intro_gradient" id="intro"></div>
-    <section class="intro">
-      <div class="intro__inner">
-        <h1 class="title">Підготовка до НМТ</h1>
-        <h3 class="subtitle">Підготуйся до НМТ швидко та просто</h3>
-      </div>
-    </section>
-
-    <!--Registration-->
-    <section class="registration" id="registration">
-      <div class="container">
-        <h1 class="registration_title">
-          Як зареєструватись для проходження НМТ 2025?
-        </h1>
-        <p class="account_instructions">
-          6 березня розпочинається основний період реєстрації осіб, які мають
-          намір узяти участь у національному мультипредметному тесті (НМТ). І
-          триватиме він до 3 квітня 2025 року. Щоб зареєструватися для участі в
-          НМТ, вступнику / вступниці потрібно за допомогою спеціального сервісу,
-          який стане активним 6 березня о 00:01, створити персональний кабінет
-          на вебсайті УЦОЯО. Це можна зробити автоматично, скориставшись
-          застосунком Дія, або ж шляхом заповнення форми в реєстраційному
-          сервісі.
-        </p>
-        <h3 class="registration_subtitle">
-          Після створення персонального кабінету виконати в ньому такі дії:
-        </h3>
-        <ul class="registration_instructions">
-          <li>
-            Зазначити реєстраційні дані (контактну інформацію, категорію
-            «випускник поточного року» або «випускник минулих років», відомості
-            про заклад освіти (для випускників поточного року), у разі потреби
-            поставити відмітку про проходження НМТ під час додаткових сесій,
-            указати на потребу створення особливих (спеціальних) умов), вибрати
-            із запропонованих переліків навчальний предмет на вибір і населений
-            пункт в Україні або за кордоном, де вступник / вступниця планує
-            перебувати в дні проведення НМТ, а також мову складання предметів
-            сертифікаційної роботи;
-          </li>
-          <li>
-            Завантажити сканкопії та/або фотокопії реєстраційних документів (їх
-            перелік програма визначить автоматично відповідно до внесених
-            реєстраційних даних):
-            <ul>
-              <li>
-                <b>документа, що містить інформацію про освіту</b>:
-                <a
-                  href="https://testportal.gov.ua/wp-content/uploads/2025/02/Dovidka-z-mistsya-navchannya_2025.pdf"
-                  target="_blank"
-                  >довідки з місця навчання</a
-                >, яка підтверджує, що особа завершує здобуття повної загальної
-                середньої освіти у 2025 році (для цьогорічних випускників), або
-                один із таких документів:
-                <b>документ про повну загальну середню освіту</b>, документ про
-                здобутий освітньо-кваліфікаційний рівень молодшого спеціаліста,
-                документ про здобутий освітньо-професійний ступінь фахового
-                молодшого бакалавра, документ про здобутий ступінь вищої освіти,
-                виписка з Реєстру документів про освіту ЄДЕБО, яка підтверджує
-                наявність у ньому одного із зазначених у цьому підпункті
-                документів про освіту (для випускників);
-              </li>
-              <li>
-                <a
-                  href="https://testportal.gov.ua/wp-content/uploads/2025/02/Dovidka-z-zakladu-pro-movu-navchannya_2025.pdf"
-                  target="_blank"
-                  >довідки про мову навчання</a
-                >
-                (для вступників / вступниць, які бажають отримати завдання
-                сертифікаційної роботи з математики, та/або історії України,
-                та/або біології, та/або географії, та/або фізики, та/або хімії
-                мовою корінного народу або національної меншини);
-              </li>
-              <li>
-                <b
-                  >медичного
-                  <a
-                    href="https://testportal.gov.ua/wp-content/uploads/2016/12/dodat_4.pdf"
-                    target="_blank"
-                    >висновку</a
-                  >
-                  про створення особливих (спеціальних) умов</b
-                >
-                для проходження зовнішнього незалежного оцінювання за формою
-                первинної облікової документації № 086-3/о «Медичний висновок
-                про створення особливих (спеціальних) умов для проходження
-                зовнішнього незалежного оцінювання», затвердженою наказом
-                Міністерства освіти і науки України, Міністерства охорони
-                здоров’я України від 29 серпня 2016 року № 1027/900 (для осіб з
-                особливими освітніми потребами);
-              </li>
-            </ul>
-          </li>
-          <li>
-            Підтвердити бажання взяти участь в НМТ і надіслати внесену
-            інформацію та копії документів на обробку до регіонального центру
-            оцінювання якості освіти, натиснувши на відповідну кнопку в сервісі.
-          </li>
-        </ul>
-        <p class="additional_register_info">
-          Детальніше про процедуру реєстрації можна дізнатись
-          <a
-            href="https://testportal.gov.ua/protsedura-reyestratsiyi-2025/"
-            target="_blank"
-            >тут</a
-          >
-          або у відео
-        </p>
-        <iframe
-          src="https://www.youtube.com/embed/gWxQYtDSjqc"
-          class="registration_video"
-        ></iframe>
-      </div>
-    </section>
-
-    <!--Cards-->
-    <section class="cards" id="cards">
-      <div class="container">
-        <h1 class="cards_title">Тести</h1>
-        <p class="cards_subtitle">
-          Пройти швидкий тест для самоперевірки готовності до НМТ
-        </p>
-        <div class="cards__inner">
-          <article class="card">
-            <img
-              src="./assets/images/cards/history-card.jpg"
-              alt=""
-              class="card_img"
-            />
-            <h2 class="card_title">Історія України</h2>
-            <p class="card_text">
-              Пройди тестування з історії України та дізнайся свій рівень знань!
-            </p>
-            <div class="card_btn_wrapper">
-              <a href="./quiz/history.html" class="card_btn">Пройти тест</a>
-            </div>
-          </article>
-          <article class="card">
-            <img
-              src="./assets/images/cards/language-card.jpg"
-              alt=""
-              class="card_img"
-            />
-            <h2 class="card_title">Українська мова</h2>
-            <p class="card_text">
-              Пройди тестування з української мови та дізнайся свій рівень
-              знань!
-            </p>
-            <div class="card_btn_wrapper">
-              <a href="./quiz/language.html" class="card_btn">Пройти тест</a>
-            </div>
-          </article>
-          <article class="card">
-            <img
-              src="./assets/images/cards/math-card.jpg"
-              alt=""
-              class="card_img"
-            />
-            <h2 class="card_title">Математика</h2>
-            <p class="card_text">
-              Пройди тестування з математики та дізнайся свій рівень знань!
-            </p>
-            <div class="card_btn_wrapper">
-              <a href="./quiz/math.html" class="card_btn">Пройти тест</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--Coaches-->
-    <section class="coaches" id="coaches">
-      <div class="container">
-        <hgroup class="team_description">
-          <h1 class="coach_title">Наша репетитори</h1>
-          <h3 class="coach_subtitle">
-            Наша команда — це яскраві, цікаві та освічені особистості. В
-            колективі працюють лише висококваліфіковані репетитори, які
-            гарантують найкращі результати та допоможуть вступити в омріяний
-            вищий навчальний заклад. Кожен із наших викладачів має стаж
-            викладання від 4 до 13 років та впевнений у своїх знаннях та
-            вміннях. Записуйся на пробний урок та переконайся в цьому сам!
-          </h3>
-        </hgroup>
-      </div>
-      <div class="coaches__inner">
-        <article class="coach">
-          <img
-            src="assets/images/coaches/coach1.jpg"
-            alt=""
-            class="coach_photo"
-          />
-          <hgroup class="coach_description">
-            <h2 class="coach_name">Богдан Мельник</h2>
-            <p class="coach_profession">Математика</p>
-          </hgroup>
-        </article>
-        <article class="coach">
-          <img
-            src="assets/images/coaches/coach2.jpg"
-            alt=""
-            class="coach_photo"
-          />
-          <hgroup class="coach_description">
-            <h2 class="coach_name">Джабар Бакарат</h2>
-            <p class="coach_profession">Українська мова</p>
-          </hgroup>
-        </article>
-        <article class="coach">
-          <img
-            src="assets/images/coaches/coach3.jpg"
-            alt=""
-            class="coach_photo"
-          />
-          <hgroup class="coach_description">
-            <h2 class="coach_name">Аврора Коваль</h2>
-            <p class="coach_profession">Історія України</p>
-          </hgroup>
-        </article>
-        <article class="coach">
-          <img
-            src="assets/images/coaches/coach4.jpg"
-            alt=""
-            class="coach_photo"
-          />
-          <hgroup class="coach_description">
-            <h2 class="coach_name">Марина Варченко</h2>
-            <p class="coach_profession">Історія України</p>
-          </hgroup>
-        </article>
-        <article class="coach">
-          <img
-            src="assets/images/coaches/coach5.jpg"
-            alt=""
-            class="coach_photo"
-          />
-          <hgroup class="coach_description">
-            <h2 class="coach_name">Катерина Тітарчук</h2>
-            <p class="coach_profession">Українська мова</p>
-          </hgroup>
-        </article>
-      </div>
-    </section>
-
-    <!--Reviews-->
-    <section class="reviews" id="reviews">
-      <div class="container">
-        <div class="slick_container">
-          <div>
-            <div class="slick_item">
-              <div class="review__inner">
-                <div class="review_left">
-                  <div class="review_header">
-                    <h1 class="reviewer_name">Марія Т.</h1>
-                    <p class="review_text">
-                      З репетиторами я змогла досягти чудових результатів на
-                      тестуванні! Завдяки їхньому індивідуальному підходу та
-                      підтримці, я впевнено засвоїла матеріал і вдало склала
-                      НМТ. Це справжній ключ до успіху, і я дуже задоволена
-                      результатами!
-                    </p>
-                  </div>
-                  <div class="review_scores">
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Українська мова</span>
-                        <span class="slider_value">200</span>
-                      </div>
-                      <div class="bar" style="width: 100%"></div>
+        <title>НМТ 2025</title>
+    </head>
+    <body>
+        <!--Header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="logo_link" href="#">
+                        <img src="assets/nmt_logo.svg" alt="Logo" />
+                    </a>
+                    <nav class="nav">
+                        <ul class="nav_items">
+                            <li class="nav_item">
+                                <a class="nav_link active" href="#intro" data-scroll="#home">Головна</a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link" href="#registration" data-scroll="#register">Реєстрація</a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link" href="#cards" data-scroll="#test">Тести</a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link" href="#coaches" data-scroll="#coaches">Репетитори</a>
+                            </li>
+                            <li class="nav_item">
+                                <a class="nav_link" href="#reviews" data-scroll="#reviews">Відгуки</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Історія України</span>
-                        <span class="slider_value">192</span>
-                      </div>
-                      <div class="bar" style="width: 92%"></div>
-                    </div>
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Математика</span>
-                        <span class="slider_value">194</span>
-                      </div>
-                      <div class="bar" style="width: 94%"></div>
-                    </div>
-                  </div>
                 </div>
-                <div class="review_right">
-                  <img
-                    src="assets/images/reviewers/reviewer1.jpg"
-                    alt="photo.jpg"
-                    class="review_img"
-                  />
-                </div>
-              </div>
             </div>
-          </div>
+        </header>
 
-          <div>
-            <div class="slick_item">
-              <div class="review__inner">
-                <div class="review_left">
-                  <div class="review_header">
-                    <h1 class="reviewer_name">Олександр Ф.</h1>
-                    <p class="review_text">
-                      Заняття з репетитором стали справжнім проривом у моїй
-                      підготовці до тестів. Всі матеріали були подані зрозуміло
-                      і доступно, що дозволило досягти високих результатів. Дуже
-                      задоволений своїми успіхами!
-                    </p>
-                  </div>
-                  <div class="review_scores">
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Українська мова</span>
-                        <span class="slider_value">183</span>
-                      </div>
-                      <div class="bar" style="width: 89%"></div>
-                    </div>
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Історія України</span>
-                        <span class="slider_value">188</span>
-                      </div>
-                      <div class="bar" style="width: 88%"></div>
-                    </div>
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Математика</span>
-                        <span class="slider_value">191</span>
-                      </div>
-                      <div class="bar" style="width: 91%"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="review_right">
-                  <img
-                    src="./assets/images/reviewers/ded.jpg"
-                    alt="photo.jpg"
-                    class="review_img"
-                  />
-                </div>
-              </div>
+        <!--Sidebar-->
+        <aside class="sidebar">
+            <div class="container">
+                <nav class="sidebar_nav">
+                    <a href="#intro" class="sidebar_link">Головна</a>
+                    <a href="#registration" class="sidebar_link">Реєстрація</a>
+                    <a href="#cards" class="sidebar_link">Тести</a>
+                    <a href="#coaches" class="sidebar_link">Репетитори</a>
+                    <a href="#reviews" class="sidebar_link">Відгуки</a>
+                </nav>
             </div>
-          </div>
+        </aside>
 
-          <div>
-            <div class="slick_item">
-              <div class="review__inner">
-                <div class="review_left">
-                  <div class="review_header">
-                    <h1 class="reviewer_name">Марк Р.</h1>
-                    <p class="review_text">
-                      З репетитором я значно покращив свої результати на
-                      тестуванні. Кожен урок був насичений корисними порадами та
-                      вправами, що допомогли мені впоратися з найскладнішими
-                      завданнями. Вдячний за професіоналізм і підтримку!
-                    </p>
-                  </div>
-                  <div class="review_scores">
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Українська мова</span>
-                        <span class="slider_value">189</span>
-                      </div>
-                      <div class="bar" style="width: 89%"></div>
-                    </div>
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Історія України</span>
-                        <span class="slider_value">180</span>
-                      </div>
-                      <div class="bar" style="width: 80%"></div>
-                    </div>
-                    <div class="slider_item">
-                      <div class="slider_text">
-                        <span class="slider_text">Математика</span>
-                        <span class="slider_value">198</span>
-                      </div>
-                      <div class="bar" style="width: 98%"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="review_right">
-                  <img
-                    src="./assets/images/reviewers/naga.jpg"
-                    alt="photo.jpg"
-                    class="review_img"
-                  />
-                </div>
-              </div>
+        <!--Intro-->
+        <div class="intro_gradient" id="intro"></div>
+        <section class="intro">
+            <div class="intro__inner">
+                <h1 class="title">Підготовка до НМТ</h1>
+                <h3 class="subtitle">Підготуйся до НМТ швидко та просто</h3>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!--Footer-->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <span class="footer_copyright">Copyright© IceBear8965</span>
-          <div class="footer_links">
-            <a
-              href="https://220school.kyiv.ua/"
-              target="_blank"
-              class="footer_link"
-            >
-              <img
-                src="assets/school-solid.svg"
-                alt=""
-                class="footer_link_icon"
-              />
-            </a>
-            <a
-              href="https://github.com/IceBear8965/nmt"
-              target="_blank"
-              class="footer_link"
-            >
-              <img
-                src="assets/github-brands.svg"
-                alt=""
-                class="footer_link_icon"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+        <!--Registration-->
+        <section class="registration" id="registration">
+            <div class="container">
+                <h1 class="registration_title">Як зареєструватись для проходження НМТ 2025?</h1>
+                <p class="account_instructions">
+                    6 березня розпочинається основний період реєстрації осіб, які мають намір узяти участь у
+                    національному мультипредметному тесті (НМТ). І триватиме він до 3 квітня 2025 року. Щоб
+                    зареєструватися для участі в НМТ, вступнику / вступниці потрібно за допомогою спеціального сервісу,
+                    який стане активним 6 березня о 00:01, створити персональний кабінет на вебсайті УЦОЯО. Це можна
+                    зробити автоматично, скориставшись застосунком Дія, або ж шляхом заповнення форми в реєстраційному
+                    сервісі.
+                </p>
+                <h3 class="registration_subtitle">Після створення персонального кабінету виконати в ньому такі дії:</h3>
+                <ul class="registration_instructions">
+                    <li>
+                        Зазначити реєстраційні дані (контактну інформацію, категорію «випускник поточного року» або
+                        «випускник минулих років», відомості про заклад освіти (для випускників поточного року), у разі
+                        потреби поставити відмітку про проходження НМТ під час додаткових сесій, указати на потребу
+                        створення особливих (спеціальних) умов), вибрати із запропонованих переліків навчальний предмет
+                        на вибір і населений пункт в Україні або за кордоном, де вступник / вступниця планує перебувати
+                        в дні проведення НМТ, а також мову складання предметів сертифікаційної роботи;
+                    </li>
+                    <li>
+                        Завантажити сканкопії та/або фотокопії реєстраційних документів (їх перелік програма визначить
+                        автоматично відповідно до внесених реєстраційних даних):
+                        <ul>
+                            <li>
+                                <b>документа, що містить інформацію про освіту</b>:
+                                <a
+                                    href="https://testportal.gov.ua/wp-content/uploads/2025/02/Dovidka-z-mistsya-navchannya_2025.pdf"
+                                    target="_blank"
+                                    >довідки з місця навчання</a
+                                >, яка підтверджує, що особа завершує здобуття повної загальної середньої освіти у 2025
+                                році (для цьогорічних випускників), або один із таких документів:
+                                <b>документ про повну загальну середню освіту</b>, документ про здобутий
+                                освітньо-кваліфікаційний рівень молодшого спеціаліста, документ про здобутий
+                                освітньо-професійний ступінь фахового молодшого бакалавра, документ про здобутий ступінь
+                                вищої освіти, виписка з Реєстру документів про освіту ЄДЕБО, яка підтверджує наявність у
+                                ньому одного із зазначених у цьому підпункті документів про освіту (для випускників);
+                            </li>
+                            <li>
+                                <a
+                                    href="https://testportal.gov.ua/wp-content/uploads/2025/02/Dovidka-z-zakladu-pro-movu-navchannya_2025.pdf"
+                                    target="_blank"
+                                    >довідки про мову навчання</a
+                                >
+                                (для вступників / вступниць, які бажають отримати завдання сертифікаційної роботи з
+                                математики, та/або історії України, та/або біології, та/або географії, та/або фізики,
+                                та/або хімії мовою корінного народу або національної меншини);
+                            </li>
+                            <li>
+                                <b
+                                    >медичного
+                                    <a
+                                        href="https://testportal.gov.ua/wp-content/uploads/2016/12/dodat_4.pdf"
+                                        target="_blank"
+                                        >висновку</a
+                                    >
+                                    про створення особливих (спеціальних) умов</b
+                                >
+                                для проходження зовнішнього незалежного оцінювання за формою первинної облікової
+                                документації № 086-3/о «Медичний висновок про створення особливих (спеціальних) умов для
+                                проходження зовнішнього незалежного оцінювання», затвердженою наказом Міністерства
+                                освіти і науки України, Міністерства охорони здоров’я України від 29 серпня 2016 року №
+                                1027/900 (для осіб з особливими освітніми потребами);
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Підтвердити бажання взяти участь в НМТ і надіслати внесену інформацію та копії документів на
+                        обробку до регіонального центру оцінювання якості освіти, натиснувши на відповідну кнопку в
+                        сервісі.
+                    </li>
+                </ul>
+                <p class="additional_register_info">
+                    Детальніше про процедуру реєстрації можна дізнатись
+                    <a href="https://testportal.gov.ua/protsedura-reyestratsiyi-2025/" target="_blank">тут</a>
+                    або у відео
+                </p>
+                <iframe src="https://www.youtube.com/embed/gWxQYtDSjqc" class="registration_video"></iframe>
+            </div>
+        </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts/menu-toggle.js"></script>
-    <script src="scripts/fixed-header.js"></script>
-    <script src="scripts/smooth-scroll.js"></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script src="./scripts/slick-slide.js"></script>
+        <!--Cards-->
+        <section class="cards" id="cards">
+            <div class="container">
+                <h1 class="cards_title">Тести</h1>
+                <p class="cards_subtitle">Пройти швидкий тест для самоперевірки готовності до НМТ</p>
+                <div class="cards__inner">
+                    <article class="card">
+                        <img src="./assets/images/cards/history-card.jpg" alt="" class="card_img" />
+                        <h2 class="card_title">Історія України</h2>
+                        <p class="card_text">Пройди тестування з історії України та дізнайся свій рівень знань!</p>
+                        <div class="card_btn_wrapper">
+                            <a href="./quiz/history.html" class="card_btn">Пройти тест</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="./assets/images/cards/language-card.jpg" alt="" class="card_img" />
+                        <h2 class="card_title">Українська мова</h2>
+                        <p class="card_text">Пройди тестування з української мови та дізнайся свій рівень знань!</p>
+                        <div class="card_btn_wrapper">
+                            <a href="./quiz/language.html" class="card_btn">Пройти тест</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="./assets/images/cards/math-card.jpg" alt="" class="card_img" />
+                        <h2 class="card_title">Математика</h2>
+                        <p class="card_text">Пройди тестування з математики та дізнайся свій рівень знань!</p>
+                        <div class="card_btn_wrapper">
+                            <a href="./quiz/math.html" class="card_btn">Пройти тест</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <!--Prevent default link for header logo-->
-    <script>
-      $(".header_logo").on("click", function (event) {
-        event.preventDefault();
-      });
-    </script>
-  </body>
+        <!--Coaches-->
+        <section class="coaches" id="coaches">
+            <div class="container">
+                <hgroup class="team_description">
+                    <h1 class="coach_title">Наша репетитори</h1>
+                    <h3 class="coach_subtitle">
+                        Наша команда — це яскраві, цікаві та освічені особистості. В колективі працюють лише
+                        висококваліфіковані репетитори, які гарантують найкращі результати та допоможуть вступити в
+                        омріяний вищий навчальний заклад. Кожен із наших викладачів має стаж викладання від 4 до 13
+                        років та впевнений у своїх знаннях та вміннях. Записуйся на пробний урок та переконайся в цьому
+                        сам!
+                    </h3>
+                </hgroup>
+            </div>
+            <div class="coaches__inner">
+                <article class="coach">
+                    <img src="assets/images/coaches/coach1.jpg" alt="" class="coach_photo" />
+                    <hgroup class="coach_description">
+                        <h2 class="coach_name">Богдан Мельник</h2>
+                        <p class="coach_profession">Математика</p>
+                    </hgroup>
+                </article>
+                <article class="coach">
+                    <img src="assets/images/coaches/coach2.jpg" alt="" class="coach_photo" />
+                    <hgroup class="coach_description">
+                        <h2 class="coach_name">Джабар Бакарат</h2>
+                        <p class="coach_profession">Українська мова</p>
+                    </hgroup>
+                </article>
+                <article class="coach">
+                    <img src="assets/images/coaches/coach3.jpg" alt="" class="coach_photo" />
+                    <hgroup class="coach_description">
+                        <h2 class="coach_name">Аврора Коваль</h2>
+                        <p class="coach_profession">Історія України</p>
+                    </hgroup>
+                </article>
+                <article class="coach">
+                    <img src="assets/images/coaches/coach4.jpg" alt="" class="coach_photo" />
+                    <hgroup class="coach_description">
+                        <h2 class="coach_name">Марина Варченко</h2>
+                        <p class="coach_profession">Історія України</p>
+                    </hgroup>
+                </article>
+                <article class="coach">
+                    <img src="assets/images/coaches/coach5.jpg" alt="" class="coach_photo" />
+                    <hgroup class="coach_description">
+                        <h2 class="coach_name">Катерина Тітарчук</h2>
+                        <p class="coach_profession">Українська мова</p>
+                    </hgroup>
+                </article>
+            </div>
+        </section>
+
+        <!--Reviews-->
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="slick_container">
+                    <div>
+                        <div class="slick_item">
+                            <div class="review__inner">
+                                <div class="review_left">
+                                    <div class="review_header">
+                                        <h1 class="reviewer_name">Марія Т.</h1>
+                                        <p class="review_text">
+                                            З репетиторами я змогла досягти чудових результатів на тестуванні! Завдяки
+                                            їхньому індивідуальному підходу та підтримці, я впевнено засвоїла матеріал і
+                                            вдало склала НМТ. Це справжній ключ до успіху, і я дуже задоволена
+                                            результатами!
+                                        </p>
+                                    </div>
+                                    <div class="review_scores">
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Українська мова</span>
+                                                <span class="slider_value">200</span>
+                                            </div>
+                                            <div class="bar" style="width: 100%"></div>
+                                        </div>
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Історія України</span>
+                                                <span class="slider_value">192</span>
+                                            </div>
+                                            <div class="bar" style="width: 92%"></div>
+                                        </div>
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Математика</span>
+                                                <span class="slider_value">194</span>
+                                            </div>
+                                            <div class="bar" style="width: 94%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_right">
+                                    <img
+                                        src="assets/images/reviewers/reviewer1.jpg"
+                                        alt="photo.jpg"
+                                        class="review_img"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="slick_item">
+                            <div class="review__inner">
+                                <div class="review_left">
+                                    <div class="review_header">
+                                        <h1 class="reviewer_name">Олександр Ф.</h1>
+                                        <p class="review_text">
+                                            Заняття з репетитором стали справжнім проривом у моїй підготовці до тестів.
+                                            Всі матеріали були подані зрозуміло і доступно, що дозволило досягти високих
+                                            результатів. Дуже задоволений своїми успіхами!
+                                        </p>
+                                    </div>
+                                    <div class="review_scores">
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Українська мова</span>
+                                                <span class="slider_value">183</span>
+                                            </div>
+                                            <div class="bar" style="width: 89%"></div>
+                                        </div>
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Історія України</span>
+                                                <span class="slider_value">188</span>
+                                            </div>
+                                            <div class="bar" style="width: 88%"></div>
+                                        </div>
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Математика</span>
+                                                <span class="slider_value">191</span>
+                                            </div>
+                                            <div class="bar" style="width: 91%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_right">
+                                    <img src="./assets/images/reviewers/ded.jpg" alt="photo.jpg" class="review_img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="slick_item">
+                            <div class="review__inner">
+                                <div class="review_left">
+                                    <div class="review_header">
+                                        <h1 class="reviewer_name">Марк Р.</h1>
+                                        <p class="review_text">
+                                            З репетитором я значно покращив свої результати на тестуванні. Кожен урок
+                                            був насичений корисними порадами та вправами, що допомогли мені впоратися з
+                                            найскладнішими завданнями. Вдячний за професіоналізм і підтримку!
+                                        </p>
+                                    </div>
+                                    <div class="review_scores">
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Українська мова</span>
+                                                <span class="slider_value">189</span>
+                                            </div>
+                                            <div class="bar" style="width: 89%"></div>
+                                        </div>
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Історія України</span>
+                                                <span class="slider_value">180</span>
+                                            </div>
+                                            <div class="bar" style="width: 80%"></div>
+                                        </div>
+                                        <div class="slider_item">
+                                            <div class="slider_text">
+                                                <span class="slider_text">Математика</span>
+                                                <span class="slider_value">198</span>
+                                            </div>
+                                            <div class="bar" style="width: 98%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_right">
+                                    <img src="./assets/images/reviewers/naga.jpg" alt="photo.jpg" class="review_img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <span class="footer_copyright">Copyright© IceBear8965</span>
+                    <div class="footer_links">
+                        <a href="https://220school.kyiv.ua/" target="_blank" class="footer_link">
+                            <img src="assets/school-solid.svg" alt="" class="footer_link_icon" />
+                        </a>
+                        <a href="https://github.com/IceBear8965/nmt" target="_blank" class="footer_link">
+                            <img src="assets/github-brands.svg" alt="" class="footer_link_icon" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="scripts/slick.min.js"></script>
+        <script src="scripts/menu-toggle.js"></script>
+        <script src="scripts/fixed-header.js"></script>
+        <script src="scripts/smooth-scroll.js"></script>
+        <script src="scripts/slick-slide.js"></script>
+
+        <!--Prevent default link for header logo-->
+        <script>
+            $(".header_logo").on("click", function (event) {
+                event.preventDefault();
+            });
+        </script>
+    </body>
 </html>
